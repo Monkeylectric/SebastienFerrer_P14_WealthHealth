@@ -1,0 +1,9 @@
+.title-container .title {
+    margin: 0;
+    color: #FFF
+}
+
+.title-container hr {
+    border: 1px solid #FFF;
+    margin-bottom: 15px;
+}

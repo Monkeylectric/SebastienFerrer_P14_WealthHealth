@@ -1,9 +1,10 @@
 .form {
-    width: 30%;
-    padding: 30px 50px;
-    background-color: rgba(255, 255, 255, 1);
+    width: 20%;
+    padding: 30px 40px;
+    /* background-color: rgba(255, 255, 255, 1); */
+    background-color: #f7f7f7;
     border-radius: 10px;
-    box-shadow: 4px 4px 6px #000;
+    box-shadow: 4px 4px 10px #505050;
 }
 
 button[type=submit] {
@@ -15,4 +16,7 @@ button[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    box-shadow:  5px 5px 12px #c6c6c6,
+             -5px -5px 12px #ffffff;
+    margin: 10px 0 0 0;
 }

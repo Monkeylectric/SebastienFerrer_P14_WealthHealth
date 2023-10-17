@@ -1,0 +1,16 @@
+.form-fieldset {
+    /* border: solid 1px #d1d1d1; */
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background: #f7f7f7;
+    box-shadow:  5px 5px 12px #c6c6c6,
+             -5px -5px 12px #ffffff;
+    margin: 15px 0;
+}
+
+.form-fieldset legend {
+    font-weight: bold;
+    /* text-align: start; */
+    font-size: 1.2rem;
+}

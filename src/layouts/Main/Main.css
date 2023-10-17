@@ -1,7 +1,7 @@
 .main-section {
     width: 100%;
-    height: calc(100% - 70px);
-    background-color: #6c850c;
+    height: calc(100% - 40px);
+    background-color: #93ad18;
     display: flex;
     justify-content: center;
     align-items: center;
