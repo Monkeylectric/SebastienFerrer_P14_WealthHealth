@@ -1,0 +1,18 @@
+.filter input {
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    border: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #f7f7f7;
+    box-shadow:  5px 5px 12px #c6c6c6,
+             -5px -5px 12px #ffffff;
+}
+
+.filter input:focus {
+    outline: none;
+    box-shadow: inset 5px 5px 12px #c6c6c6,
+            inset -5px -5px 12px #ffffff;
+}
