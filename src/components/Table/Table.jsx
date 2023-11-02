@@ -7,6 +7,8 @@ import Pagination from '../Pagination/Pagination';
 import { getMockedData } from '../../services/utils';
 import ShowEntries from '../ShowEntries/ShowEntries';
 
+import sortIcon from '../../assets/sort.svg';
+
 function Table() {
     const defaultData = getMockedData();
     
@@ -58,9 +60,11 @@ function Table() {
                                 header.getContext()
                             )}
                         {
-                            header.column.getCanSort && <i 
+                            header.column.getCanSort && <img 
+                                    src={sortIcon}
+                                    alt="sort"
                                     onClick={header.column.getToggleSortingHandler()}
-                                >%</i>
+                                />
                         }
                         {
                             {
