@@ -1,12 +1,6 @@
 import './Filter.css';
 
-function Filter({columnFilters, setColumnFilters}) {
-    const columnValue = columnFilters.find(filter => filter.id === "lastName")?.value || "";
-
-    const onFilterChange = (id, value) => {
-        return setColumnFilters(prev => prev.filter(filter => filter.id).concat({id, value}));
-    }
-
+function Filter({glonalFilter, setGlonalFilter}) {
     return (
         <div className="filter">
             <div className="filter-input-group">
@@ -14,8 +8,8 @@ function Filter({columnFilters, setColumnFilters}) {
                 <input 
                     type="text" 
                     placeholder="Search" 
-                    defaultValue={columnValue}
-                    onChange={(e) => onFilterChange("lastName", e.target.value)}
+                    defaultValue={glonalFilter}
+                    onChange={(e) => setGlonalFilter(e.target.value)}
                 />
             </div>
         </div>

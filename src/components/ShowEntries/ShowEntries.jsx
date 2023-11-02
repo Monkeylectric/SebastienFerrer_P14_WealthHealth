@@ -2,7 +2,7 @@ import './ShowEntries.css';
 
 function ShowEntries({pagination, setPagination}) {
     const handleChange = (e) => {
-        setPagination({...pagination, pageSize: e.target.value});
+        setPagination({pageIndex: 0, pageSize: parseInt(e.target.value)});
     };
 
     return (

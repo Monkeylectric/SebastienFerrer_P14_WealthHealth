@@ -11,22 +11,23 @@ function Table() {
     const defaultData = getMockedData();
     
     const [data, setData] = useState(() => [...defaultData]);
-    const [columnFilters, setColumnFilters] = useState([]);
+    const [globalFilter, setGlonalFilter] = useState("");
     const [pagination, setPagination] = useState({
         pageIndex: 0,
-        pageSize: 10
+        pageSize: 10,
     });
 
     const table = useReactTable({
         data,
         columns,
         state: {
-            columnFilters,
+            globalFilter,
             pagination,
         },
         getCoreRowModel: getCoreRowModel(),
         getSortedRowModel: getSortedRowModel(),
         getFilteredRowModel: getFilteredRowModel(),
+        onGlobalFilterChanged: setGlonalFilter,
         getPaginationRowModel: getPaginationRowModel(),
         debugTable: true,
     });
@@ -35,12 +36,13 @@ function Table() {
         <div className="table-container">
             <div className="table-filters">
                 <ShowEntries 
+                    table={table}
                     pagination={pagination}
                     setPagination={setPagination}
                 />
                 <Filter 
-                    columnFilters={columnFilters}
-                    setColumnFilters={setColumnFilters}
+                    glonalFilter={globalFilter}
+                    setGlonalFilter={setGlonalFilter}
                 />
             </div>
             <table className="table-content">

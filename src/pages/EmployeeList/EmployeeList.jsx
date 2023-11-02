@@ -16,7 +16,6 @@ function EmployeeList() {
                 customStyle={{
                     display:"flex", 
                     flexDirection: "column",
-                    rowGap: "2vh",
                 }}
             >
                 <Title text="Current Employees" />

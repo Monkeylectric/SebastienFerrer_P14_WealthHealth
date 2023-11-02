@@ -7,6 +7,7 @@
     box-shadow: 4px 4px 10px #505050;
     max-height: calc(100% - 40px);
     padding: 30px;
+    margin-bottom: 3vh;
 }
 
 .table-filters {
