@@ -1,6 +1,6 @@
 import './Filter.css';
 
-function Filter({glonalFilter, setGlonalFilter}) {
+function Filter({glonalFilter, setGlonalFilter, pagination, setPagination}) {
     return (
         <div className="filter">
             <div className="filter-input-group">
@@ -9,7 +9,10 @@ function Filter({glonalFilter, setGlonalFilter}) {
                     type="text" 
                     placeholder="Search" 
                     defaultValue={glonalFilter}
-                    onChange={(e) => setGlonalFilter(e.target.value)}
+                    onChange={(e) => {
+                        setGlonalFilter(e.target.value);
+                        setPagination({...pagination, pageIndex: 0});
+                    }}
                 />
             </div>
         </div>

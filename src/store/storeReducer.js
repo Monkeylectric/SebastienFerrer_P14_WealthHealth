@@ -9,10 +9,7 @@ export const storeSlice = createSlice({
     initialState: initialState,
     reducers: {
         addEmployee: (state, action) => {
-            state.employees.push({
-                firstName: action.payload.firstName,
-                lastName: action.payload.lastName,
-            });
+            state.employees.push(action.payload);
         },
     },
 })

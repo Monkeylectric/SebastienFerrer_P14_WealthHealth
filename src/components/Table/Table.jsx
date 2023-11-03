@@ -6,11 +6,16 @@ import Filter from '../Filter/Filter';
 import Pagination from '../Pagination/Pagination';
 import { getMockedData } from '../../services/utils';
 import ShowEntries from '../ShowEntries/ShowEntries';
+import { storeSelector } from '../../store/storeSelectors';
+import { useSelector } from 'react-redux';
 
 import sortIcon from '../../assets/sort.svg';
 
 function Table() {
     const defaultData = getMockedData();
+    // console.log(defaultData);
+    const employees = useSelector(storeSelector).employees;
+    console.log(employees);
     
     const [data, setData] = useState(() => [...defaultData]);
     const [globalFilter, setGlonalFilter] = useState("");
@@ -31,7 +36,7 @@ function Table() {
         getFilteredRowModel: getFilteredRowModel(),
         onGlobalFilterChanged: setGlonalFilter,
         getPaginationRowModel: getPaginationRowModel(),
-        debugTable: true,
+        // debugTable: true,
     });
 
     return (
@@ -45,6 +50,8 @@ function Table() {
                 <Filter 
                     glonalFilter={globalFilter}
                     setGlonalFilter={setGlonalFilter}
+                    pagination={pagination}
+                    setPagination={setPagination}
                 />
             </div>
             <table className="table-content">

@@ -5,11 +5,10 @@ import Input from '../Input/Input';
 import Select from '../Select/Select';
 import './Form.css';
 import FormRow from '../../layouts/FormRow/FormRow';
+import { useDispatch } from 'react-redux';
+import { addEmployee } from '../../store/storeActions';
 
 function Form() {
-    const states = getStates();
-    const departments = getDepartments();
-
     const [formData, setFormData] = useState({
         firstname: "",
         lastname: "",
@@ -21,18 +20,27 @@ function Form() {
         zipcode: "",
         department: "",
     });
-
+    const states = getStates();
+    const departments = getDepartments();
+    const dispatch = useDispatch();
+    
     const handleChange = (e) => {
         const { name, value } = e.target;
 
         setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
 
-        console.log(formData);
+        // console.log(formData);
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.currentTarget.checkValidity());
+
+        const isFormValid = e.currentTarget.checkValidity();
+        console.log(isFormValid, formData);
+
+        if (isFormValid) {
+            dispatch(addEmployee(formData));
+        }
     }
 
     return (
