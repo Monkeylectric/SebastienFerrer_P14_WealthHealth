@@ -13,9 +13,8 @@ import sortIcon from '../../assets/sort.svg';
 
 function Table() {
     const defaultData = getMockedData();
+    // const defaultData = useSelector(storeSelector).employees;
     // console.log(defaultData);
-    const employees = useSelector(storeSelector).employees;
-    console.log(employees);
     
     const [data, setData] = useState(() => [...defaultData]);
     const [globalFilter, setGlonalFilter] = useState("");

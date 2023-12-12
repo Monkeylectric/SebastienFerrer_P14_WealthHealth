@@ -3,20 +3,20 @@ import { createColumnHelper } from '@tanstack/react-table';
 const columnHelper = createColumnHelper();
 
 const columns = [
-    columnHelper.accessor("firstName", {
-        id: "firstName",
+    columnHelper.accessor("firstname", {
+        id: "firstname",
         cell: info => info.getValue(),
         header: () => <span>First Name</span>,
         enableColumnFilter: true,
     }),
-    columnHelper.accessor("lastName", {
-        id: "lastName",
+    columnHelper.accessor("firstname", {
+        id: "lastname",
         cell: info => <i>{info.getValue()}</i>,
         header: () => <span>Last Name</span>,
         enableColumnFilter: true,
     }),
-    columnHelper.accessor("startDate", {
-        id: "startDate",
+    columnHelper.accessor("startdate", {
+        id: "startdate",
         cell: info => info.getValue(),
         header: () => <span>Start Date</span>,
         enableColumnFilter: true,
@@ -27,8 +27,8 @@ const columns = [
         cell: info => info.getValue(),
         enableColumnFilter: true,
     }),
-    columnHelper.accessor("dateOfBirth", {
-        id: "dateOfBirth",
+    columnHelper.accessor("birthdate", {
+        id: "birthdate",
         header: () => <span>Date Of Birth</span>,
         cell: info => info.getValue(),
         enableColumnFilter: true,
@@ -50,8 +50,8 @@ const columns = [
         header: () => <span>State</span>,
         enableColumnFilter: true,
     }),
-    columnHelper.accessor("zipCode", {
-        id: "zipCode",
+    columnHelper.accessor("zipcode", {
+        id: "zipcode",
         cell: info => info.getValue(),
         header: () => <span>Zip Code</span>,
         enableColumnFilter: true,

@@ -16,7 +16,14 @@ button[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    box-shadow:  5px 5px 12px #c6c6c6,
-             -5px -5px 12px #ffffff;
+    box-shadow: 5px 5px 12px #c6c6c6,
+                -5px -5px 12px #ffffff;
     margin: 10px 0 0 0;
+}
+button[type=submit]:hover {
+    box-shadow: none;
+}
+button[type=submit]:active {
+    box-shadow: inset 5px 5px 12px #419544,
+                inset -5px -5px 12px #57c95c;
 }

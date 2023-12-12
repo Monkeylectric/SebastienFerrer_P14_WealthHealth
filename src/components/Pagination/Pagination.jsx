@@ -7,8 +7,15 @@ function Pagination({table, pagination, setPagination}) {
         <div className="pagination">
             <button 
                 onClick={() => {
+                    setPagination({...pagination, pageIndex: 0});
+                    // return table.previousPage();
+                }} 
+                disabled={!table.getCanPreviousPage()}
+            >{"<<"}</button>
+            <button 
+                onClick={() => {
                     setPagination({...pagination, pageIndex: currentPage - 1});
-                    return table.previousPage();
+                    // return table.previousPage();
                 }} 
                 disabled={!table.getCanPreviousPage()}
             >{"<"}</button>
@@ -18,10 +25,17 @@ function Pagination({table, pagination, setPagination}) {
             <button
                 onClick={() => {
                     setPagination({...pagination, pageIndex: currentPage + 1});
-                    return table.nextPage();
+                    // return table.nextPage();
                 }} 
                 disabled={!table.getCanNextPage()}
             >{">"}</button>
+            <button
+                onClick={() => {
+                    setPagination({...pagination, pageIndex: table.getPageCount() - 1});
+                    // return table.nextPage();
+                }} 
+                disabled={!table.getCanNextPage()}
+            >{">>"}</button>
         </div>
     )
 }
