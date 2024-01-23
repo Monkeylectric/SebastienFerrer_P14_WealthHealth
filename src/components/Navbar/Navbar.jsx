@@ -1,7 +1,13 @@
 import { NavLink } from "react-router-dom";
 import './Navbar.css';
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo.webp";
 
+/**
+ * Component which displays 
+ * navbar in page top
+ * 
+ * @returns navbar component
+ */
 function Navbar() {
     return (
         <nav className="main-nav">

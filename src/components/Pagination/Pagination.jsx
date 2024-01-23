@@ -1,5 +1,15 @@
 import './Pagination.css';
 
+/**
+ * Component which displays 
+ * pagination in table
+ * 
+ * @param {Object} table 
+ * @param {Object} pagination 
+ * @param {Function} setPagination 
+ * 
+ * @returns pagination component
+ */
 function Pagination({table, pagination, setPagination}) {
     const currentPage = table.getState().pagination.pageIndex;
 

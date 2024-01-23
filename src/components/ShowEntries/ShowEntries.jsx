@@ -1,5 +1,13 @@
 import './ShowEntries.css';
 
+/**
+ * Component which displays slect input 
+ * to show max lines number
+ * 
+ * @param {Function} setPagination 
+ * 
+ * @returns show entries component
+ */
 function ShowEntries({pagination, setPagination}) {
     const handleChange = (e) => {
         setPagination({pageIndex: 0, pageSize: parseInt(e.target.value)});

@@ -1,6 +1,20 @@
 import PropTypes from 'prop-types';
 import './Input.css';
 
+/**
+ * Component which displays input form
+ * 
+ * @param {String} id 
+ * @param {String} label 
+ * @param {String} type 
+ * @param {String} value 
+ * @param {Function} onChange 
+ * @param {Date} max 
+ * @param {Regex} pattern 
+ * @param {Boolean} required 
+ * 
+ * @returns input component
+ */
 function Input({id, label, type, value, onChange, max, pattern, required}) {
     return (
         <div className="form-input">

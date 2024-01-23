@@ -1,6 +1,17 @@
 import './Filter.css';
 
-function Filter({glonalFilter, setGlonalFilter, pagination, setPagination}) {
+/**
+ * Component which manage 
+ * filter input in table
+ * 
+ * @param {String} globalFilter 
+ * @param {Function} setGlobalFilter 
+ * @param {Object} pagination 
+ * @param {Function} setPagination 
+ * 
+ * @returns filter component
+ */
+function Filter({globalFilter, setGlobalFilter, pagination, setPagination}) {
     return (
         <div className="filter">
             <div className="filter-input-group">
@@ -8,9 +19,9 @@ function Filter({glonalFilter, setGlonalFilter, pagination, setPagination}) {
                 <input 
                     type="text" 
                     placeholder="Search" 
-                    defaultValue={glonalFilter}
+                    defaultValue={globalFilter}
                     onChange={(e) => {
-                        setGlonalFilter(e.target.value);
+                        setGlobalFilter(e.target.value);
                         setPagination({...pagination, pageIndex: 0});
                     }}
                 />

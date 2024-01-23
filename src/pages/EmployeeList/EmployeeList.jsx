@@ -6,8 +6,11 @@ import Main from '../../layouts/Main/Main';
 import Title from '../../components/Title/Title';
 import Table from '../../components/Table/Table';
 
-// import { useLoaderData } from "react-router-dom";
-
+/**
+ * Employee list page
+ * 
+ * @returns employee list page
+ */
 function EmployeeList() {
     return (
         <React.Fragment>

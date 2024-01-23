@@ -11,6 +11,12 @@ import { useSelector } from 'react-redux';
 
 import sortIcon from '../../assets/sort.svg';
 
+/**
+ * Component which displays employee table 
+ * into employee list page
+ * 
+ * @returns Table
+ */
 function Table() {
     const defaultData = getMockedData();
     // const defaultData = useSelector(storeSelector).employees;
@@ -47,8 +53,8 @@ function Table() {
                     setPagination={setPagination}
                 />
                 <Filter 
-                    glonalFilter={globalFilter}
-                    setGlonalFilter={setGlonalFilter}
+                    globalFilter={globalFilter}
+                    setGlobalFilter={setGlonalFilter}
                     pagination={pagination}
                     setPagination={setPagination}
                 />
@@ -100,7 +106,7 @@ function Table() {
                 pagination={pagination}
                 setPagination={setPagination}
             />
-      </div>
+        </div>
     )
 }
 

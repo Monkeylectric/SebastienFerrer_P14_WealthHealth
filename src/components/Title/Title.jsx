@@ -1,5 +1,12 @@
 import './Title.css';
 
+/**
+ * Component which displays page title
+ * 
+ * @param {String} text
+ *  
+ * @returns title component
+ */
 function Title({text}) {
     return (
         <div className="title-container">

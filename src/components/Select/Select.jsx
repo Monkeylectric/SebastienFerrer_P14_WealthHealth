@@ -1,6 +1,20 @@
 import PropTypes from 'prop-types';
 import './Select.css';
 
+/**
+ * Component which displays select 
+ * input on form
+ * 
+ * @param {String} id 
+ * @param {String} label 
+ * @param {String} name 
+ * @param {String} value 
+ * @param {Function} onChange 
+ * @param {Array} options 
+ * @param {Boolean} required 
+ * 
+ * @returns select component
+ */
 function Select({id, label, name, value, onChange, options, required}) {
     return (
         <div className="form-select">
