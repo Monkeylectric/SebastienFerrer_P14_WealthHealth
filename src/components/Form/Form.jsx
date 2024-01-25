@@ -150,7 +150,7 @@ function Form() {
             </form>
             {displayModal && <Modal 
                 handleCloseModal={handleCloseModal}
-                message="Test message beaucoup trop long pour entrer dans la modal" 
+                message="Employé crée !" 
                 overlayOpacity={.8} 
                 modalBackground="#fff" 
                 modalColor="#000" 
