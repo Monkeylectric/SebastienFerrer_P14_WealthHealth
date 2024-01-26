@@ -9,7 +9,7 @@ const columns = [
         header: () => <span>First Name</span>,
         enableColumnFilter: true,
     }),
-    columnHelper.accessor("firstname", {
+    columnHelper.accessor("lastname", {
         id: "lastname",
         cell: info => <i>{info.getValue()}</i>,
         header: () => <span>Last Name</span>,
