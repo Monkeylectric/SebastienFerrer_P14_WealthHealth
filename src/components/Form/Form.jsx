@@ -106,7 +106,6 @@ function Form() {
                         type="text" 
                         value={formData.street} 
                         onChange={handleChange} 
-                        pattern="^[0-9a-zA-Zéèàêôâîûüù]{2,50}$" 
                         required
                     />
                     <Input 
